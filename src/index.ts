@@ -146,7 +146,7 @@ class ByteBroom {
             }
         }
 
-        for (const [size, files] of sizeMap.entries()) {
+        for (const [, files] of sizeMap.entries()) {
             if (files.length > 1) {
                 for (const file of files) {
                     try {
