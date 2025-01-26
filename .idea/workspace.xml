@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2afac1-8391-423a-bd6a-8965dcddd312" name="Changes" comment="initial commit: Set up the first working version">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ad2afac1-8391-423a-bd6a-8965dcddd312" name="Changes" comment="chore: Remove unnecessary comments&#10;&#10;This commit removes unnecessary comments from the codebase. These&#10;comments were either redundant, outdated, or did not provide&#10;sufficient value to justify their presence. Removing them improves&#10;code readability and reduces visual clutter.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <list id="2e6e1497-30bb-4a52-9537-0d45769b82e6" name="Working stage" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -30,9 +30,27 @@
         <option value="Vijaykoushik, S. &lt;svijaykoushik@hotmail.com&gt;" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SAVE_CHANGES_POLICY" value="STASH" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;svijaykoushik&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/svijaykoushik/bytebroom.git",
+    "accountId": "5b41aad8-1a36-4ff2-ad6f-7186753ef2e3"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -49,20 +67,20 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
-    "Node.js.index.js.executor": "Debug",
+    "Node.js.index.js.executor": "Run",
     "Node.js.index.ts.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "5-refactor-code-to-follow-single-responsibility-principle-srp",
     "last_opened_file_path": "/home/blaze/WebstormProjects/duplicate-finder/src/index.ts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
-    "ts.external.directory.path": "/home/blaze/WebstormProjects/duplicate-finder/node_modules/typescript/lib",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "ts.external.directory.path": "E:\\My Documents\\GitHub\\bytebroom\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -70,19 +88,25 @@
       "directory",
       "module",
       "repository"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown"
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.index.js">
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" application-parameters="$USER_HOME$/Downloads" path-to-node="$USER_HOME$/.nvm/versions/node/v20.9.0/bin/node" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/dist">
+  <component name="RunManager">
+    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="E:\Downloads" nameIsGenerated="true" path-to-js-file="index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/src">
+      <envs>
+        <env name="NODE_ENV" value="development" />
+      </envs>
       <method v="2" />
     </configuration>
-    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="$USER_HOME$/Downloads" path-to-node="$USER_HOME$/.nvm/versions/node/v20.9.0/bin/node" nameIsGenerated="true" path-to-js-file="index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/src">
+    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="$USER_HOME$/Downloads" path-to-node="$USER_HOME$/.nvm/versions/node/v20.9.0/bin/node" path-to-js-file="$PROJECT_DIR$/src/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/dist">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.index.ts" />
         <item itemvalue="Node.js.index.ts" />
       </list>
     </recent_temporary>
@@ -90,7 +114,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
       </set>
     </attachedChunks>
   </component>
@@ -109,6 +133,8 @@
       <workItem from="1737457836035" duration="7964000" />
       <workItem from="1737541994542" duration="3582000" />
       <workItem from="1737635087925" duration="4892000" />
+      <workItem from="1737789556670" duration="10871000" />
+      <workItem from="1737896430367" duration="11214000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: Setup the first working version">
       <option name="closed" value="true" />
@@ -206,7 +232,63 @@
       <option name="project" value="LOCAL" />
       <updated>1737725760725</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="initial commit: Set up the first working version">
+      <option name="closed" value="true" />
+      <created>1737727534332</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1737727534332</updated>
+    </task>
+    <task id="LOCAL-00014" summary="initial commit: Set up the first working version">
+      <option name="closed" value="true" />
+      <created>1737727568084</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1737727568084</updated>
+    </task>
+    <task id="LOCAL-00015" summary="initial commit: Set up the first working version">
+      <option name="closed" value="true" />
+      <created>1737727605093</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1737727605093</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix(dev): Ensure worker threads run in dev mode&#10;&#10;Worker threads were not being properly initialized in development&#10;mode, leading to unexpected behavior and errors. This commit&#10;corrects the initialization process to ensure that worker threads&#10;function as expected during development. This resolves issues&#10;where certain features relying on worker threads were not&#10;functioning correctly in the development environment.">
+      <option name="closed" value="true" />
+      <created>1737897424206</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1737897424206</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix(progressbar): Truncate long file names to prevent progress bar jitter&#10;&#10;Long file names were causing the progress bar to jitter or jump&#10;around during updates. This commit truncates long file names&#10;before displaying them in the progress bar, ensuring that the&#10;progress bar remains stable and animates smoothly in the same&#10;position. This improves the user experience by providing a more&#10;visually appealing and less distracting progress indicator.">
+      <option name="closed" value="true" />
+      <created>1737906605630</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1737906605630</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore(dev-script): Add cross-platform dev script&#10;&#10;This commit adds a development script using `cross-env` to ensure&#10;consistent execution in development environments across both&#10;Windows and Unix-like operating systems. This simplifies the&#10;development process and eliminates potential cross-platform&#10;compatibility issues related to environment variable handling.">
+      <option name="closed" value="true" />
+      <created>1737908260649</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1737908260649</updated>
+    </task>
+    <task id="LOCAL-00019" summary="chore: Remove unnecessary comments&#10;&#10;This commit removes unnecessary comments from the codebase. These&#10;comments were either redundant, outdated, or did not provide&#10;sufficient value to justify their presence. Removing them improves&#10;code readability and reduces visual clutter.">
+      <option name="closed" value="true" />
+      <created>1737908486727</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1737908486727</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,40 +356,14 @@
     <MESSAGE value="Working stage" />
     <MESSAGE value="initial commit: Set up the first working version&#10;&#10;Signed-off-by: Vijaykoushik Sekar &lt;vijaykoushik@blaze.ws&gt;" />
     <MESSAGE value="initial commit: Set up the first working version" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit: Set up the first working version" />
+    <MESSAGE value="fix(dev): Ensure worker threads run in dev mode&#10;&#10;Worker threads were not being properly initialized in development&#10;mode, leading to unexpected behavior and errors. This commit&#10;corrects the initialization process to ensure that worker threads&#10;function as expected during development. This resolves issues&#10;where certain features relying on worker threads were not&#10;functioning correctly in the development environment." />
+    <MESSAGE value="fix(progressbar): Truncate long file names to prevent progress bar jitter&#10;&#10;Long file names were causing the progress bar to jitter or jump&#10;around during updates. This commit truncates long file names&#10;before displaying them in the progress bar, ensuring that the&#10;progress bar remains stable and animates smoothly in the same&#10;position. This improves the user experience by providing a more&#10;visually appealing and less distracting progress indicator." />
+    <MESSAGE value="chore(dev-script): Add cross-platform dev script&#10;&#10;This commit adds a development script using `cross-env` to ensure&#10;consistent execution in development environments across both&#10;Windows and Unix-like operating systems. This simplifies the&#10;development process and eliminates potential cross-platform&#10;compatibility issues related to environment variable handling." />
+    <MESSAGE value="chore: Remove unnecessary comments&#10;&#10;This commit removes unnecessary comments from the codebase. These&#10;comments were either redundant, outdated, or did not provide&#10;sufficient value to justify their presence. Removing them improves&#10;code readability and reduces visual clutter." />
+    <MESSAGE value="ci: Integrate Prettier, Husky, and lint-staged&#10;&#10;This commit integrates Prettier, Husky, and lint-staged into the&#10;project's CI/CD pipeline. Prettier will automatically format code,&#10;Husky will enable Git hooks to run checks before commits, and&#10;lint-staged will ensure that only staged files are checked. This&#10;improves code quality, consistency, and streamlines the development&#10;workflow." />
+    <option name="LAST_COMMIT_MESSAGE" value="ci: Integrate Prettier, Husky, and lint-staged&#10;&#10;This commit integrates Prettier, Husky, and lint-staged into the&#10;project's CI/CD pipeline. Prettier will automatically format code,&#10;Husky will enable Git hooks to run checks before commits, and&#10;lint-staged will ensure that only staged files are checked. This&#10;improves code quality, consistency, and streamlines the development&#10;workflow." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/dist/index.js</url>
-          <line>60</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/dist/index.js</url>
-          <line>86</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/dist/index.js</url>
-          <line>151</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/dist/index.js</url>
-          <line>218</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/dist/index.js</url>
-          <line>232</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

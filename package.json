@@ -4,12 +4,21 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "cross-env NODE_ENV=development tsx src/index.ts",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/node": "^20.17.14",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.7",
+    "prettier": "3.4.2",
+    "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "typescript": "^5.5.3"
   },
-  "private": true
+  "private": true,
+  "lint-staged": {
+    "**/*.{js,ts,json,css,md}": "prettier --write --ignore-unknown"
+  }
 }
