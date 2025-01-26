@@ -25,7 +25,7 @@ export class ResultsPrinter {
                 'File Paths': `${path.basename(files[0])} (${files.length} files)`,
                 'Duplicate Size': this.formatSize(fileSize),
                 'Recovery Potential': this.formatSize(recoveryPotential),
-                Hash: hash
+                Hash: hash,
             });
 
             if (verbose) {
@@ -34,7 +34,7 @@ export class ResultsPrinter {
                         'File Paths': `  File ${index + 1}: ${file}`,
                         'Duplicate Size': '',
                         'Recovery Potential': '',
-                        Hash: ''
+                        Hash: '',
                     });
                 });
             }

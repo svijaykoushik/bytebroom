@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2afac1-8391-423a-bd6a-8965dcddd312" name="Changes" comment="chore(dev-script): Add cross-platform dev script&#10;&#10;This commit adds a development script using `cross-env` to ensure&#10;consistent execution in development environments across both&#10;Windows and Unix-like operating systems. This simplifies the&#10;development process and eliminates potential cross-platform&#10;compatibility issues related to environment variable handling." />
+    <list default="true" id="ad2afac1-8391-423a-bd6a-8965dcddd312" name="Changes" comment="chore: Remove unnecessary comments&#10;&#10;This commit removes unnecessary comments from the codebase. These&#10;comments were either redundant, outdated, or did not provide&#10;sufficient value to justify their presence. Removing them improves&#10;code readability and reduces visual clutter.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <list id="2e6e1497-30bb-4a52-9537-0d45769b82e6" name="Working stage" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +79,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
-    "ts.external.directory.path": "F:\\WebStorm-2024.3.win\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "ts.external.directory.path": "E:\\My Documents\\GitHub\\bytebroom\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -130,7 +134,7 @@
       <workItem from="1737541994542" duration="3582000" />
       <workItem from="1737635087925" duration="4892000" />
       <workItem from="1737789556670" duration="10871000" />
-      <workItem from="1737896430367" duration="9274000" />
+      <workItem from="1737896430367" duration="11214000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: Setup the first working version">
       <option name="closed" value="true" />
@@ -276,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737908260649</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="chore: Remove unnecessary comments&#10;&#10;This commit removes unnecessary comments from the codebase. These&#10;comments were either redundant, outdated, or did not provide&#10;sufficient value to justify their presence. Removing them improves&#10;code readability and reduces visual clutter.">
+      <option name="closed" value="true" />
+      <created>1737908486727</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1737908486727</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +359,9 @@
     <MESSAGE value="fix(dev): Ensure worker threads run in dev mode&#10;&#10;Worker threads were not being properly initialized in development&#10;mode, leading to unexpected behavior and errors. This commit&#10;corrects the initialization process to ensure that worker threads&#10;function as expected during development. This resolves issues&#10;where certain features relying on worker threads were not&#10;functioning correctly in the development environment." />
     <MESSAGE value="fix(progressbar): Truncate long file names to prevent progress bar jitter&#10;&#10;Long file names were causing the progress bar to jitter or jump&#10;around during updates. This commit truncates long file names&#10;before displaying them in the progress bar, ensuring that the&#10;progress bar remains stable and animates smoothly in the same&#10;position. This improves the user experience by providing a more&#10;visually appealing and less distracting progress indicator." />
     <MESSAGE value="chore(dev-script): Add cross-platform dev script&#10;&#10;This commit adds a development script using `cross-env` to ensure&#10;consistent execution in development environments across both&#10;Windows and Unix-like operating systems. This simplifies the&#10;development process and eliminates potential cross-platform&#10;compatibility issues related to environment variable handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(dev-script): Add cross-platform dev script&#10;&#10;This commit adds a development script using `cross-env` to ensure&#10;consistent execution in development environments across both&#10;Windows and Unix-like operating systems. This simplifies the&#10;development process and eliminates potential cross-platform&#10;compatibility issues related to environment variable handling." />
+    <MESSAGE value="chore: Remove unnecessary comments&#10;&#10;This commit removes unnecessary comments from the codebase. These&#10;comments were either redundant, outdated, or did not provide&#10;sufficient value to justify their presence. Removing them improves&#10;code readability and reduces visual clutter." />
+    <MESSAGE value="ci: Integrate Prettier, Husky, and lint-staged&#10;&#10;This commit integrates Prettier, Husky, and lint-staged into the&#10;project's CI/CD pipeline. Prettier will automatically format code,&#10;Husky will enable Git hooks to run checks before commits, and&#10;lint-staged will ensure that only staged files are checked. This&#10;improves code quality, consistency, and streamlines the development&#10;workflow." />
+    <option name="LAST_COMMIT_MESSAGE" value="ci: Integrate Prettier, Husky, and lint-staged&#10;&#10;This commit integrates Prettier, Husky, and lint-staged into the&#10;project's CI/CD pipeline. Prettier will automatically format code,&#10;Husky will enable Git hooks to run checks before commits, and&#10;lint-staged will ensure that only staged files are checked. This&#10;improves code quality, consistency, and streamlines the development&#10;workflow." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

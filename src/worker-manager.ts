@@ -15,11 +15,14 @@ export class WorkerManager extends EventEmitter {
     }
 
     public createWorker(data: string, cb: (result: any) => void, errCb: (error: any) => void): void {
-        const path = process.env.NODE_ENV === 'production' ? resolve(__dirname, './file-hash-worker.js') : resolve(__dirname, './file-hash-worker.ts')
+        const path =
+            process.env.NODE_ENV === 'production'
+                ? resolve(__dirname, './file-hash-worker.js')
+                : resolve(__dirname, './file-hash-worker.ts');
         const worker = new Worker(path, {
             workerData: data,
             // env:  process.env.NODE_ENV === 'development' ? { NODE_OPTIONS: "--import tsx" } : undefined,
-            execArgv: process.env.NODE_ENV === 'development' ? ['-r', 'ts-node/register'] : undefined
+            execArgv: process.env.NODE_ENV === 'development' ? ['-r', 'ts-node/register'] : undefined,
         });
         this.workers.push(worker);
 
@@ -51,7 +54,8 @@ export class WorkerManager extends EventEmitter {
 }
 
 export class TaskQueueManager {
-    private taskQueue: { data: string; cb: (result: any) => void; errCb: (error: any) => void }[] = [];
+    private taskQueue: { data: string; cb: (result: any) => void; errCb: (error: any) => void }[] =
+        [];
 
     constructor(private workerManager: WorkerManager) {
         workerManager.on('workerFreed', () => this.processNextTask());
