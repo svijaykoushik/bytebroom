@@ -12,10 +12,11 @@ interface Options {
 }
 
 export class ByteBroom {
-    private knownSystemDirs: Set<string>;
+    private readonly knownSystemDirs: Set<string>;
     private directoryTraverser: DirectoryTraverser;
     private duplicateDetector: DuplicateDetector;
-    private progressDisplay: ProgressDisplay;
+    private traverseProgressDisplay: ProgressDisplay;
+    private scanProgressDisplay: ProgressDisplay;
 
     constructor(
         options: Options,
@@ -25,18 +26,33 @@ export class ByteBroom {
         this.knownSystemDirs = new Set(options.knownSystemDirs.map(dir => path.resolve(dir)));
         this.directoryTraverser = new DirectoryTraverser(this.knownSystemDirs, fileOperations);
         this.duplicateDetector = new DuplicateDetector(taskQueueManager);
-        this.progressDisplay = new ProgressDisplay();
+        this.traverseProgressDisplay = new ProgressDisplay();
+        this.scanProgressDisplay = new ProgressDisplay();
 
-        this.directoryTraverser.on('fileProcessed', (dir) => this.progressDisplay.update(dir));
+        this.directoryTraverser.on('fileProcessed', (dir) => this.traverseProgressDisplay.update(`Searching - ${dir}`));
+        this.duplicateDetector.on('fileScanned', (file: string) => this.scanProgressDisplay.update(`Scanning - ${file}`));
     }
 
     public async findDuplicates(directory: string, verbose: boolean): Promise<void> {
         const totalFiles = await this.directoryTraverser.countFiles(directory);
-        this.progressDisplay.setTotal(totalFiles);
+        this.traverseProgressDisplay.setTotal(totalFiles);
 
         const sizeMap = await this.directoryTraverser.traverse(directory);
+        this.traverseProgressDisplay.finish();
+        const totalFilesToScan = this.countTotalFilesToScan(sizeMap);
+        this.scanProgressDisplay.setTotal(totalFilesToScan);
         const duplicates = await this.duplicateDetector.detectDuplicates(sizeMap);
 
         ResultsPrinter.print(duplicates, verbose);
+    }
+
+    private countTotalFilesToScan(sizeMap: Map<number, string[]>): number {
+        let totalItems = 0;
+
+        for (const value of sizeMap.values()) {
+            totalItems += value.length;
+        }
+
+        return totalItems;
     }
 }

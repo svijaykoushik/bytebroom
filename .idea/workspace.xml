@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2afac1-8391-423a-bd6a-8965dcddd312" name="Changes" comment="initial commit: Set up the first working version">
-      <change afterPath="$PROJECT_DIR$/src/file-hash-worker.ts" afterDir="false" />
+    <list default="true" id="ad2afac1-8391-423a-bd6a-8965dcddd312" name="Changes" comment="fix(dev): Ensure worker threads run in dev mode&#10;&#10;Worker threads were not being properly initialized in development&#10;mode, leading to unexpected behavior and errors. This commit&#10;corrects the initialization process to ensure that worker threads&#10;function as expected during development. This resolves issues&#10;where certain features relying on worker threads were not&#10;functioning correctly in the development environment.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/worker-manager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/worker-manager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/byte-broom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/byte-broom.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/duplicate-detector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/duplicate-detector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/progress-display.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/progress-display.ts" afterDir="false" />
     </list>
     <list id="2e6e1497-30bb-4a52-9537-0d45769b82e6" name="Working stage" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +38,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SAVE_CHANGES_POLICY" value="STASH" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -136,7 +135,7 @@
       <workItem from="1737541994542" duration="3582000" />
       <workItem from="1737635087925" duration="4892000" />
       <workItem from="1737789556670" duration="10871000" />
-      <workItem from="1737896430367" duration="869000" />
+      <workItem from="1737896430367" duration="8013000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: Setup the first working version">
       <option name="closed" value="true" />
@@ -258,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737727605093</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix(dev): Ensure worker threads run in dev mode&#10;&#10;Worker threads were not being properly initialized in development&#10;mode, leading to unexpected behavior and errors. This commit&#10;corrects the initialization process to ensure that worker threads&#10;function as expected during development. This resolves issues&#10;where certain features relying on worker threads were not&#10;functioning correctly in the development environment.">
+      <option name="closed" value="true" />
+      <created>1737897424206</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1737897424206</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,20 +333,10 @@
     <MESSAGE value="Working stage" />
     <MESSAGE value="initial commit: Set up the first working version&#10;&#10;Signed-off-by: Vijaykoushik Sekar &lt;vijaykoushik@blaze.ws&gt;" />
     <MESSAGE value="initial commit: Set up the first working version" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit: Set up the first working version" />
+    <MESSAGE value="fix(dev): Ensure worker threads run in dev mode&#10;&#10;Worker threads were not being properly initialized in development&#10;mode, leading to unexpected behavior and errors. This commit&#10;corrects the initialization process to ensure that worker threads&#10;function as expected during development. This resolves issues&#10;where certain features relying on worker threads were not&#10;functioning correctly in the development environment." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(dev): Ensure worker threads run in dev mode&#10;&#10;Worker threads were not being properly initialized in development&#10;mode, leading to unexpected behavior and errors. This commit&#10;corrects the initialization process to ensure that worker threads&#10;function as expected during development. This resolves issues&#10;where certain features relying on worker threads were not&#10;functioning correctly in the development environment." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/file-operations.ts</url>
-          <line>1</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
