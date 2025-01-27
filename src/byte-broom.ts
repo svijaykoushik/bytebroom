@@ -4,8 +4,8 @@ import {DuplicateDetector} from './duplicate-detector';
 import {TaskQueueManager} from './worker-manager';
 import {FileOperations} from './file-operations';
 import {ProgressDisplay} from './progress-display';
-import {ResultsPrinter} from './results-printer';
 import path from 'path';
+import {DuplicateFileDeleter} from "./duplicate-file-deleter";
 
 interface Options {
   knownSystemDirs: string[];
@@ -47,7 +47,9 @@ export class ByteBroom {
     this.scanProgressDisplay.setTotal(totalFilesToScan);
     const duplicates = await this.duplicateDetector.detectDuplicates(sizeMap);
 
-    ResultsPrinter.print(duplicates, verbose);
+    const deleter = new DuplicateFileDeleter(duplicates);
+    await deleter.run()
+    // ResultsPrinter.print(duplicates, verbose);
   }
 
   private countTotalFilesToScan(sizeMap: Map<number, string[]>): number {
