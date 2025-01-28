@@ -25,7 +25,7 @@ export class ByteBroom {
   ) {
     this.knownSystemDirs = new Set(options.knownSystemDirs.map((dir) => path.resolve(dir)));
     this.directoryTraverser = new DirectoryTraverser(this.knownSystemDirs, fileOperations);
-    this.duplicateDetector = new DuplicateDetector(taskQueueManager);
+    this.duplicateDetector = new DuplicateDetector(this.taskQueueManager);
     this.traverseProgressDisplay = new ProgressDisplay();
     this.scanProgressDisplay = new ProgressDisplay();
 

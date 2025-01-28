@@ -43,12 +43,22 @@
     &quot;assignee&quot;: &quot;svijaykoushik&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/svijaykoushik/bytebroom.git",
-    "accountId": "df29561f-c00c-4a90-9889-f6081510cbc0"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/svijaykoushik/bytebroom.git&quot;,
+    &quot;accountId&quot;: &quot;df29561f-c00c-4a90-9889-f6081510cbc0&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;svijaykoushik&quot;,
+    &quot;repository&quot;: &quot;bytebroom&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -70,7 +80,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#14 on 11-implement-interactive-actions-…elete&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/blaze/WebstormProjects/duplicate-finder/src/index.ts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -133,7 +143,8 @@
       <workItem from="1737635087925" duration="4892000" />
       <workItem from="1737789556670" duration="10871000" />
       <workItem from="1737896430367" duration="11214000" />
-      <workItem from="1737983509622" duration="2069000" />
+      <workItem from="1737983509622" duration="2421000" />
+      <workItem from="1738046431873" duration="3480000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: Setup the first working version">
       <option name="closed" value="true" />
@@ -287,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737908486727</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat: Add interactive delete module&#10;&#10;Adds interactive delete module to allow user to&#10;delete interactively by selecting the files they deem as unwanted">
+      <option name="closed" value="true" />
+      <created>1737986396610</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1737986396610</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +379,8 @@
     <MESSAGE value="chore(dev-script): Add cross-platform dev script&#10;&#10;This commit adds a development script using `cross-env` to ensure&#10;consistent execution in development environments across both&#10;Windows and Unix-like operating systems. This simplifies the&#10;development process and eliminates potential cross-platform&#10;compatibility issues related to environment variable handling." />
     <MESSAGE value="chore: Remove unnecessary comments&#10;&#10;This commit removes unnecessary comments from the codebase. These&#10;comments were either redundant, outdated, or did not provide&#10;sufficient value to justify their presence. Removing them improves&#10;code readability and reduces visual clutter." />
     <MESSAGE value="ci: Integrate Prettier, Husky, and lint-staged&#10;&#10;This commit integrates Prettier, Husky, and lint-staged into the&#10;project's CI/CD pipeline. Prettier will automatically format code,&#10;Husky will enable Git hooks to run checks before commits, and&#10;lint-staged will ensure that only staged files are checked. This&#10;improves code quality, consistency, and streamlines the development&#10;workflow." />
-    <option name="LAST_COMMIT_MESSAGE" value="ci: Integrate Prettier, Husky, and lint-staged&#10;&#10;This commit integrates Prettier, Husky, and lint-staged into the&#10;project's CI/CD pipeline. Prettier will automatically format code,&#10;Husky will enable Git hooks to run checks before commits, and&#10;lint-staged will ensure that only staged files are checked. This&#10;improves code quality, consistency, and streamlines the development&#10;workflow." />
+    <MESSAGE value="feat: Add interactive delete module&#10;&#10;Adds interactive delete module to allow user to&#10;delete interactively by selecting the files they deem as unwanted" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add interactive delete module&#10;&#10;Adds interactive delete module to allow user to&#10;delete interactively by selecting the files they deem as unwanted" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
