@@ -17,7 +17,7 @@ export class DuplicateDetector extends EventEmitter {
         files.length && this.emit('fileScanned', files[0]);
         continue;
       }
-      for (const file of files) {
+      const promises = files.map(async (file: string) => {
         try {
           const hash = await this.taskQueueManager.executeTask(file);
           if (fileHashes.has(hash)) {
@@ -31,7 +31,9 @@ export class DuplicateDetector extends EventEmitter {
         } finally {
           this.emit('fileScanned', file);
         }
-      }
+      });
+
+      await Promise.all(promises);
     }
     return duplicates;
   }
