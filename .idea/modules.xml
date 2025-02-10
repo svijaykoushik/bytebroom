@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/duplicate-finder.iml" filepath="$PROJECT_DIR$/.idea/duplicate-finder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bytebroom.iml" filepath="$PROJECT_DIR$/.idea/bytebroom.iml" />
     </modules>
   </component>
 </project>

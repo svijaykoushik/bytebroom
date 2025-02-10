@@ -1,4 +1,5 @@
 import inquirer from 'inquirer';
+import {EventEmitter} from "events";
 
 interface DuplicateGroup {
     displayName: string;
@@ -11,13 +12,14 @@ interface PageState {
     selectedFiles: string[];
 }
 
-export class DuplicateFileDeleter {
+export class DuplicateFileDeleter extends EventEmitter {
     private groups: DuplicateGroup[] = [];
     private pageStates = new Map<number, PageState>();
     private currentPage = 0;
     private readonly PAGE_SIZE = 5;
 
     constructor(private inputMap: Map<string, string[]>) {
+        super();
         this.groups = this.processGroups(inputMap);
     }
 
@@ -140,7 +142,7 @@ export class DuplicateFileDeleter {
         if (hasPrevious) choices.push('← Previous Page');
         if (hasNext) choices.push('→ Next Page');
         choices.push(
-            {name: '🚀 Finish and Delete', value: 'finish'},
+            {name: '🚀 Finish and Trash', value: 'finish'},
             {name: '🚫 Cancel and Exit', value: 'cancel'}
         );
 
@@ -153,8 +155,15 @@ export class DuplicateFileDeleter {
     }
 
     private async performDeletion(selectedFiles: string[]): Promise<void> {
-        console.log('Deleting the following files:');
-        console.log(selectedFiles.join('\n'));
-        // Add actual file deletion logic here
+        // new line for delete progress
+        process.stdout.write('\n');
+        this.emit('totalSelectedFiles', selectedFiles.length);
+        const trashModule = await import('trash');
+        const promises = selectedFiles.map(async (file) => {
+            await trashModule.default(file);
+            this.emit('fileTrashed', file);
+        })
+        await Promise.all(promises);
+        this.emit('allFilesTrashed');
     }
 }
