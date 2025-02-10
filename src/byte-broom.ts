@@ -17,6 +17,7 @@ export class ByteBroom {
   private duplicateDetector: DuplicateDetector;
   private traverseProgressDisplay: ProgressDisplay;
   private scanProgressDisplay: ProgressDisplay;
+  private deleteProgressDisplay: ProgressDisplay;
 
   constructor(
       options: Options,
@@ -28,6 +29,7 @@ export class ByteBroom {
     this.duplicateDetector = new DuplicateDetector(this.taskQueueManager);
     this.traverseProgressDisplay = new ProgressDisplay();
     this.scanProgressDisplay = new ProgressDisplay();
+    this.deleteProgressDisplay = new ProgressDisplay();
 
     this.directoryTraverser.on('fileProcessed', (dir) =>
         this.traverseProgressDisplay.update(`Searching - ${dir}`),
@@ -46,9 +48,22 @@ export class ByteBroom {
     const totalFilesToScan = this.countTotalFilesToScan(sizeMap);
     this.scanProgressDisplay.setTotal(totalFilesToScan);
     const duplicates = await this.duplicateDetector.detectDuplicates(sizeMap);
+    this.scanProgressDisplay.finish();
 
     const deleter = new DuplicateFileDeleter(duplicates);
-    await deleter.run()
+    await deleter.run();
+
+    deleter.on('totalSelectedFiles', (total: number) => {
+      this.deleteProgressDisplay.setTotal(total);
+    });
+
+    deleter.on('fileTrashed', (deletedFile: string) => {
+      this.deleteProgressDisplay.update(`Trashed - ${deletedFile}`);
+    });
+
+    deleter.on('allFilesTrashed', () => {
+      this.deleteProgressDisplay.finish();
+    })
     // ResultsPrinter.print(duplicates, verbose);
   }
 

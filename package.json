@@ -22,6 +22,7 @@
     "**/*.{js,ts,json,css,md}": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "inquirer": "^12.3.2"
+    "inquirer": "^12.3.2",
+    "trash": "^9.0.0"
   }
 }
