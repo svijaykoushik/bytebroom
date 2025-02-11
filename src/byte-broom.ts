@@ -9,6 +9,7 @@ import {DuplicateFileDeleter} from "./duplicate-file-deleter";
 
 interface Options {
   knownSystemDirs: string[];
+  filter: string[];
 }
 
 export class ByteBroom {
@@ -25,7 +26,7 @@ export class ByteBroom {
       fileOperations: FileOperations,
   ) {
     this.knownSystemDirs = new Set(options.knownSystemDirs.map((dir) => path.resolve(dir)));
-    this.directoryTraverser = new DirectoryTraverser(this.knownSystemDirs, fileOperations);
+    this.directoryTraverser = new DirectoryTraverser(this.knownSystemDirs, fileOperations, options.filter);
     this.duplicateDetector = new DuplicateDetector(this.taskQueueManager);
     this.traverseProgressDisplay = new ProgressDisplay();
     this.scanProgressDisplay = new ProgressDisplay();

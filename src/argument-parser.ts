@@ -1,13 +1,50 @@
 // argument-parser.ts
 import * as path from 'path';
+import yargs from 'yargs';
+import {hideBin} from 'yargs/helpers';
 
 export class ArgumentParser {
-    public static parse(args: string[]): { directory?: string; verbose: boolean; help: boolean } {
-        const directory = args.find((arg) => !arg.startsWith('--'));
+    public static parse(): { verbose: boolean; directory: string; filter?: string[] } {
+        const args = yargs(hideBin(process.argv))
+            .command(
+                '$0 <directory>',
+                'Scan a directory for duplicate files',
+                (yargs) => {
+                    yargs
+                        .positional('directory', {
+                            describe: 'Directory to scan for duplicates',
+                            type: 'string',
+                            coerce: (dir: string) => path.resolve(dir), // Convert to absolute path
+                        })
+                }
+            )
+            .demandCommand(1)
+            .option('verbose', {
+                alias: 'v',
+                type: 'boolean',
+                default: false,
+                describe: 'Provide a verbose report',
+            })
+            .option('filter', {
+                alias: 'f',
+                type: 'string',
+                describe: 'Comma-separated list of file extensions to filter (e.g., "jpg,png,txt")',
+                coerce: (filter: string) =>
+                    filter
+                        ? filter
+                            .split(',')
+                            .map((ext) => ext.trim().toLowerCase())
+                            .filter((ext) => ext.length > 0) // Remove empty values
+                        : undefined,
+            })
+            .help()
+            .alias('h', 'help')
+            .parseSync();
+
         return {
-            directory: directory ? path.resolve(directory) : undefined,
-            verbose: args.includes('--verbose'),
-            help: args.includes('--help'),
+            directory: args.directory as string,
+            verbose: args.verbose,
+            filter: args.filter,
         };
     }
 }
