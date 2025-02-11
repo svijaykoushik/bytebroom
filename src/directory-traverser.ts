@@ -9,10 +9,12 @@ export class DirectoryTraverser extends EventEmitter {
     constructor(
         private knownSystemDirs: Set<string>,
         private fileOperations: FileOperations,
-        private filterFileExtensions: string[],
+        private filterFileExtensions: string[] = [],
+        private excludeExtensions: string[] = []
     ) {
         super();
         this.filterFileExtensions = this.filterFileExtensions.map(ext => ext.toLowerCase());
+        this.excludeExtensions = this.excludeExtensions.map(ext => ext.toLowerCase());
     }
 
     public async countFiles(directory: string): Promise<number> {
@@ -69,8 +71,19 @@ export class DirectoryTraverser extends EventEmitter {
     }
 
     private isAllowedExtension(fileName: string): boolean {
-        if (this.filterFileExtensions.length === 0) return true; // If no filter is set, allow all files
         const ext = path.extname(fileName).toLowerCase().replace('.', ''); // Extract extension without dot
+
+        // If exclude list contains the extension, reject it
+        if (this.excludeExtensions.includes(ext)) {
+            return false;
+        }
+
+        // If filter list is empty, allow all files
+        if (this.filterFileExtensions.length === 0) {
+            return true;
+        }
+
+        // If filter list is present, only allow those extensions
         return this.filterFileExtensions.includes(ext);
     }
 }

@@ -4,7 +4,7 @@ import yargs from 'yargs';
 import {hideBin} from 'yargs/helpers';
 
 export class ArgumentParser {
-    public static parse(): { verbose: boolean; directory: string; filter?: string[] } {
+public static parse(): { verbose: boolean; directory: string; filter?: string[], exclude?: string[] } 
         const args = yargs(hideBin(process.argv))
             .command(
                 '$0 <directory>',
@@ -28,10 +28,22 @@ export class ArgumentParser {
             .option('filter', {
                 alias: 'f',
                 type: 'string',
-                describe: 'Comma-separated list of file extensions to filter (e.g., "jpg,png,txt")',
+                describe: 'Comma-separated list of file extensions to filter (e.g., jpg,png,txt)',
                 coerce: (filter: string) =>
                     filter
                         ? filter
+                            .split(',')
+                            .map((ext) => ext.trim().toLowerCase())
+                            .filter((ext) => ext.length > 0) // Remove empty values
+                        : undefined,
+            })
+            .option('exclude', {
+                alias: 'e',
+                type: 'string',
+                describe: 'Comma-separated list of file extensions to exclude (e.g., mp4,exe)',
+                coerce: (exclude: string) =>
+                    exclude
+                        ? exclude
                             .split(',')
                             .map((ext) => ext.trim().toLowerCase())
                             .filter((ext) => ext.length > 0) // Remove empty values
@@ -45,6 +57,7 @@ export class ArgumentParser {
             directory: args.directory as string,
             verbose: args.verbose,
             filter: args.filter,
+            exclude: args.exclude,
         };
     }
 }

@@ -13,7 +13,7 @@ if (!isMainThread) {
         .catch((error) => parentPort?.postMessage(error));
 } else {
     (async () => {
-        const {directory, verbose, filter} = ArgumentParser.parse();
+        const {directory, verbose, filter, exclude} = ArgumentParser.parse();
 
         try {
             const maxWorkers = os.cpus().length;
@@ -22,7 +22,7 @@ if (!isMainThread) {
             const fileOperations = new FileOperations();
 
             const byteBroom = new ByteBroom(
-                {knownSystemDirs: ['/System', '/Windows', '/usr'], filter: filter || []},
+                {knownSystemDirs: ['/System', '/Windows', '/usr'], filter: filter || [], exclude: exclude || []},
                 taskQueueManager,
                 fileOperations,
             );
