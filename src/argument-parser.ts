@@ -4,7 +4,7 @@ import yargs from 'yargs';
 import {hideBin} from 'yargs/helpers';
 
 export class ArgumentParser {
-    public static parse(): { verbose: boolean; directory: string; filter?: string[], exclude?: string[] } {
+public static parse(): { verbose: boolean; directory: string; filter?: string[], exclude?: string[] } 
         const args = yargs(hideBin(process.argv))
             .command(
                 '$0 <directory>',
