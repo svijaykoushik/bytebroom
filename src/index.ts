@@ -6,6 +6,7 @@ import {ErrorHandler} from './error-handler';
 import * as os from 'os';
 import {isMainThread, parentPort, workerData} from 'worker_threads';
 import {HashingWorker} from './hashing-worker';
+import {existsSync, statSync} from "fs";
 
 if (!isMainThread) {
     HashingWorker.hashFile(workerData)
@@ -14,7 +15,14 @@ if (!isMainThread) {
 } else {
     (async () => {
         const {directories, verbose, filter, exclude} = ArgumentParser.parse();
+        const invalidDirs = directories.filter((dir) => !existsSync(dir) || !statSync(dir).isDirectory());
 
+        if (invalidDirs.length > 0) {
+            const error = new Error()
+            error.message = `Error: The following directories do not exist or are not valid directories: \n${invalidDirs.join('\n')}`
+            ErrorHandler.handle(error);
+            process.exit(1);
+        }
         try {
             const maxWorkers = os.cpus().length;
             const workerManager = new WorkerManager(maxWorkers);
