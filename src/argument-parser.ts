@@ -1,20 +1,22 @@
 // argument-parser.ts
 import * as path from 'path';
 import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
+import {hideBin} from 'yargs/helpers';
 
 export class ArgumentParser {
-  public static parse(): { verbose: boolean; directory: string; filter?: string[], exclude?: string[] } {
+    public static parse(): { verbose: boolean; directories: string[]; filter?: string[], exclude?: string[] } {
     const args = yargs(hideBin(process.argv))
       .command(
-        '$0 <directory>',
+          '$0 <directories...>',
         'Scan a directory for duplicate files',
         (yargs) => {
           yargs
             .positional('directory', {
               describe: 'Directory to scan for duplicates',
               type: 'string',
-              coerce: (dir: string) => path.resolve(dir), // Convert to absolute path
+                coerce: (dirs: string[]) => {
+                    return dirs.map((dir) => path.resolve(dir.trim()));
+                },
             });
         },
       )
@@ -54,7 +56,7 @@ export class ArgumentParser {
       .parseSync();
 
     return {
-      directory: args.directory as string,
+        directories: (args.directories as string[]).map((dir) => dir.trim()).filter((dir, i, dirs) => dirs.indexOf(dir) === i),
       verbose: args.verbose,
       filter: args.filter,
       exclude: args.exclude,

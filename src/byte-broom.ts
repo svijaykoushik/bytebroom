@@ -6,6 +6,7 @@ import {FileOperations} from './file-operations';
 import {ProgressDisplay} from './progress-display';
 import path from 'path';
 import {DuplicateFileDeleter} from "./duplicate-file-deleter";
+import {Utils} from "./utils";
 
 interface Options {
   knownSystemDirs: string[];
@@ -41,16 +42,34 @@ export class ByteBroom {
     );
   }
 
-  public async findDuplicates(directory: string, verbose: boolean): Promise<void> {
-    const totalFiles = await this.directoryTraverser.countFiles(directory);
+  public async findDuplicates(directories: string[], verbose: boolean): Promise<void> {
+    let totalFiles = 0;
+    for (const directory of directories) {
+      totalFiles += await this.directoryTraverser.countFiles(directory);
+    }
     this.traverseProgressDisplay.setTotal(totalFiles);
 
-    const sizeMap = await this.directoryTraverser.traverse(directory);
+    const sizeMaps: Map<number, string[]>[] = [];
+    for (const directory of directories) {
+      sizeMaps.push(await this.directoryTraverser.traverse(directory));
+    }
     this.traverseProgressDisplay.finish();
-    const totalFilesToScan = this.countTotalFilesToScan(sizeMap);
+
+    const combinedSizeMap = Utils.mergeMaps<number, string>(...sizeMaps);
+
+    const totalFilesToScan = this.countTotalFilesToScan(combinedSizeMap);
+    if (totalFilesToScan === 0) {
+      this.printNoDuplicates()
+      process.exit(0);
+    }
     this.scanProgressDisplay.setTotal(totalFilesToScan);
-    const duplicates = await this.duplicateDetector.detectDuplicates(sizeMap);
+    const duplicates = await this.duplicateDetector.detectDuplicates(combinedSizeMap);
     this.scanProgressDisplay.finish();
+
+    if (duplicates.size === 0) {
+      this.printNoDuplicates();
+      process.exit(0);
+    }
 
     const deleter = new DuplicateFileDeleter(duplicates);
     await deleter.run();
@@ -77,5 +96,10 @@ export class ByteBroom {
     }
 
     return totalItems;
+  }
+
+  private printNoDuplicates() {
+    process.stdout.write('No Duplicates Found');
+    process.stdout.write('\n');
   }
 }
