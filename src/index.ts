@@ -13,7 +13,7 @@ if (!isMainThread) {
         .catch((error) => parentPort?.postMessage(error));
 } else {
     (async () => {
-        const {directory, verbose, filter, exclude} = ArgumentParser.parse();
+        const {directories, verbose, filter, exclude} = ArgumentParser.parse();
 
         try {
             const maxWorkers = os.cpus().length;
@@ -26,7 +26,7 @@ if (!isMainThread) {
                 taskQueueManager,
                 fileOperations,
             );
-            await byteBroom.findDuplicates(directory, verbose);
+            await byteBroom.findDuplicates(directories, verbose);
         } catch (error) {
             ErrorHandler.handle(error);
             process.exit(1);
