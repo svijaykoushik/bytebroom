@@ -14,7 +14,9 @@ export class ArgumentParser {
             .positional('directory', {
               describe: 'Directory to scan for duplicates',
               type: 'string',
-              coerce: (dir: string) => path.resolve(dir), // Convert to absolute path
+                coerce: (dirs: string[]) => {
+                    return dirs.map((dir) => path.resolve(dir.trim()));
+                },
             });
         },
       )
@@ -54,7 +56,7 @@ export class ArgumentParser {
       .parseSync();
 
     return {
-        directories: args.directories as string[],
+        directories: (args.directories as string[]).map((dir) => dir.trim()).filter((dir, i, dirs) => dirs.indexOf(dir) === i),
       verbose: args.verbose,
       filter: args.filter,
       exclude: args.exclude,
