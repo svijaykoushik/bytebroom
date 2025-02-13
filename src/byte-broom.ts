@@ -58,9 +58,18 @@ export class ByteBroom {
     const combinedSizeMap = Utils.mergeMaps<number, string>(...sizeMaps);
 
     const totalFilesToScan = this.countTotalFilesToScan(combinedSizeMap);
+    if (totalFilesToScan === 0) {
+      this.printNoDuplicates()
+      process.exit(0);
+    }
     this.scanProgressDisplay.setTotal(totalFilesToScan);
     const duplicates = await this.duplicateDetector.detectDuplicates(combinedSizeMap);
     this.scanProgressDisplay.finish();
+
+    if (duplicates.size === 0) {
+      this.printNoDuplicates();
+      process.exit(0);
+    }
 
     const deleter = new DuplicateFileDeleter(duplicates);
     await deleter.run();
@@ -87,5 +96,10 @@ export class ByteBroom {
     }
 
     return totalItems;
+  }
+
+  private printNoDuplicates() {
+    process.stdout.write('No Duplicates Found');
+    process.stdout.write('\n');
   }
 }
