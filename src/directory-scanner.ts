@@ -11,6 +11,12 @@ export class DirectoryScanner extends EventEmitter {
   }
 
   public async scan(directories: string[]): Promise<Map<number, string[]>> {
+    if (Array.isArray(directories) === false) {
+      const error = new Error();
+      error.name = 'DirectoryScanError';
+      error.message = 'Expected directories to be an array';
+      throw error;
+    }
     const counts = await Promise.all(directories.map(async (directory) => {
       return await this.directoryTraverser.countFiles(directory);
     }));
