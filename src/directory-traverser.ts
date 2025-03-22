@@ -1,9 +1,9 @@
 // directory-traverser.ts
 import * as fs from 'fs';
 import * as path from 'path';
-import {EventEmitter} from 'events';
-import {FileOperations} from './file-operations';
-import {ErrorHandler} from './error-handler';
+import { EventEmitter } from 'events';
+import { FileOperations } from './file-operations';
+import { ErrorHandler } from './error-handler';
 
 export class DirectoryTraverser extends EventEmitter {
     constructor(
@@ -55,13 +55,17 @@ export class DirectoryTraverser extends EventEmitter {
                 if (entry.isDirectory()) {
                     await this.traverseDirectory(fullPath, sizeMap);
                 } else if (entry.isFile() && this.isAllowedExtension(entry.name)) {
-                    this.emit('fileProcessed', directory);
-                    const stats = await this.fileOperations.getFileStats(fullPath);
-                    if (stats && stats.isFile()) {
-                        const size = stats.size;
-                        const files = sizeMap.get(size) || [];
-                        files.push(fullPath);
-                        sizeMap.set(size, files);
+                    try {
+                        const stats = await this.fileOperations.getFileStats(fullPath);
+                        this.emit('fileProcessed', directory);
+                        if (stats && stats.isFile()) {
+                            const size = stats.size;
+                            const files = sizeMap.get(size) || [];
+                            files.push(fullPath);
+                            sizeMap.set(size, files);
+                        }
+                    } catch (e) {
+                        ErrorHandler.handle(e, `Error accessing file ${fullPath}`);
                     }
                 }
             }
