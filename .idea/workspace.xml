@@ -113,8 +113,8 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Mocha.Directory Traverser.Traverse Directory.should handle permission errors when accessing files">
-    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="$USER_HOME$/Downloads" path-to-node="$USER_HOME$/.nvm/versions/node/v20.9.0/bin/node" path-to-js-file="$PROJECT_DIR$/src/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/dist">
+  <component name="RunManager" selected="Node.js.index.ts">
+    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="F:\WinFoneBakup" path-to-node="node" path-to-js-file="$PROJECT_DIR$/src/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/dist">
       <method v="2" />
     </configuration>
     <configuration name="Directory Traverser.Traverse Directory.should correctly group files with equal size despite having different extensions" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
@@ -212,11 +212,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.index.ts" />
         <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should handle permission errors when accessing files" />
         <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly traverse and aggregate files with equal sizes acrros subdirectories" />
         <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size" />
         <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size despite having different extensions" />
-        <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should give size Map with 1 item" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +255,10 @@
       <workItem from="1739732278782" duration="167000" />
       <workItem from="1741187015954" duration="2987000" />
       <workItem from="1742624572221" duration="13177000" />
-      <workItem from="1742643582535" duration="519000" />
+      <workItem from="1742643582535" duration="1535000" />
+      <workItem from="1742659475470" duration="2085000" />
+      <workItem from="1742662529854" duration="535000" />
+      <workItem from="1742707336957" duration="1270000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: Setup the first working version">
       <option name="closed" value="true" />
@@ -449,7 +452,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741194259563</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="test: Update unit test for directory traverser&#10;&#10;Updates unit tests for `Directory Traverser` to test related to flows where files and folders could not be accessed">
+      <option name="closed" value="true" />
+      <created>1742644435216</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742644435216</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +538,8 @@
     <MESSAGE value="ci: Enable CI workflow" />
     <MESSAGE value="test: Add unit tests&#10;&#10;Adds unit tests for `DuplicateFileDeleterFactory`&#10;and `ErrorHandler` classes" />
     <MESSAGE value="test: Add unit test for directory traverser&#10;&#10;Adds unit tests for `Directory Traverser`" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: Add unit test for directory traverser&#10;&#10;Adds unit tests for `Directory Traverser`" />
+    <MESSAGE value="test: Update unit test for directory traverser&#10;&#10;Updates unit tests for `Directory Traverser` to test related to flows where files and folders could not be accessed" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: Update unit test for directory traverser&#10;&#10;Updates unit tests for `Directory Traverser` to test related to flows where files and folders could not be accessed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -536,19 +548,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/directory-traverser.ts</url>
-          <line>21</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/tests/directory-traverser.test.ts</url>
           <line>125</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
+          <condition expression="directory.includes(&quot;Playlist&quot;)" language="TypeScript" />
           <url>file://$PROJECT_DIR$/src/directory-traverser.ts</url>
-          <line>39</line>
-          <option name="timeStamp" value="13" />
+          <line>58</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
