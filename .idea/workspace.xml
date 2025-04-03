@@ -71,52 +71,152 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Node.js.index.js.executor": "Run",
-    "Node.js.index.ts.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/home/blaze/WebstormProjects/duplicate-finder/src/index.ts",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "ts.external.directory.path": "E:\\My Documents\\GitHub\\bytebroom\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Mocha.Directory Traverser.Count Files.should count files correctly when the root directory contains only subdirectories.executor&quot;: &quot;Debug&quot;,
+    &quot;Mocha.Directory Traverser.Count Files.should count other directories when first does not have permission.executor&quot;: &quot;Debug&quot;,
+    &quot;Mocha.Directory Traverser.Count Files.should provide correct count.executor&quot;: &quot;Debug&quot;,
+    &quot;Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size despite having different extensions.executor&quot;: &quot;Debug&quot;,
+    &quot;Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.Directory Traverser.Traverse Directory.should correctly traverse and aggregate files with equal sizes acrros subdirectories.executor&quot;: &quot;Debug&quot;,
+    &quot;Mocha.Directory Traverser.Traverse Directory.should give size Map with 1 item.executor&quot;: &quot;Debug&quot;,
+    &quot;Mocha.Directory Traverser.Traverse Directory.should handle permission errors when accessing files.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.ts.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;23-implement-unit-tests-using-mocha-chai-and-sinon-to-improve-code-qualit…erage&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/blaze/WebstormProjects/duplicate-finder/src/index.ts&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.mocha.mocha_node_package_dir&quot;: &quot;E:/My Documents/GitHub/bytebroom/node_modules/mocha&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\My Documents\\GitHub\\bytebroom\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="E:\Downloads" nameIsGenerated="true" path-to-js-file="index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/src">
-      <envs>
-        <env name="NODE_ENV" value="development" />
-      </envs>
+}</component>
+  <component name="RunManager" selected="Node.js.index.ts">
+    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="F:\WinFoneBakup" path-to-node="node" path-to-js-file="$PROJECT_DIR$/src/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/dist">
       <method v="2" />
     </configuration>
-    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="$USER_HOME$/Downloads" path-to-node="$USER_HOME$/.nvm/versions/node/v20.9.0/bin/node" path-to-js-file="$PROJECT_DIR$/src/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/dist">
+    <configuration name="Directory Traverser.Traverse Directory.should correctly group files with equal size despite having different extensions" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/tests/directory-traverser.test.ts</test-file>
+      <test-names>
+        <name value="Directory Traverser" />
+        <name value="Traverse Directory" />
+        <name value="should correctly group files with equal size despite having different extensions" />
+      </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Directory Traverser.Traverse Directory.should correctly group files with equal size" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/tests/directory-traverser.test.ts</test-file>
+      <test-names>
+        <name value="Directory Traverser" />
+        <name value="Traverse Directory" />
+        <name value="should correctly group files with equal size" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Directory Traverser.Traverse Directory.should correctly traverse and aggregate files with equal sizes acrros subdirectories" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/tests/directory-traverser.test.ts</test-file>
+      <test-names>
+        <name value="Directory Traverser" />
+        <name value="Traverse Directory" />
+        <name value="should correctly traverse and aggregate files with equal sizes acrros subdirectories" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Directory Traverser.Traverse Directory.should give size Map with 1 item" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/tests/directory-traverser.test.ts</test-file>
+      <test-names>
+        <name value="Directory Traverser" />
+        <name value="Traverse Directory" />
+        <name value="should give size Map with 1 item" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Directory Traverser.Traverse Directory.should handle permission errors when accessing files" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/tests/directory-traverser.test.ts</test-file>
+      <test-names>
+        <name value="Directory Traverser" />
+        <name value="Traverse Directory" />
+        <name value="should handle permission errors when accessing files" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size" />
+      <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size despite having different extensions" />
+      <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly traverse and aggregate files with equal sizes acrros subdirectories" />
+      <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should give size Map with 1 item" />
+      <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should handle permission errors when accessing files" />
+      <item itemvalue="Node.js.index.ts" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.index.ts" />
-        <item itemvalue="Node.js.index.ts" />
+        <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should handle permission errors when accessing files" />
+        <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly traverse and aggregate files with equal sizes acrros subdirectories" />
+        <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size" />
+        <item itemvalue="Mocha.Directory Traverser.Traverse Directory.should correctly group files with equal size despite having different extensions" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +247,18 @@
       <workItem from="1737983509622" duration="2421000" />
       <workItem from="1738046431873" duration="3480000" />
       <workItem from="1739293109611" duration="1256000" />
-      <workItem from="1739294894419" duration="357000" />
+      <workItem from="1739294894419" duration="769000" />
+      <workItem from="1739622720571" duration="3495000" />
+      <workItem from="1739627193571" duration="9670000" />
+      <workItem from="1739685531000" duration="1588000" />
+      <workItem from="1739703890048" duration="14819000" />
+      <workItem from="1739732278782" duration="167000" />
+      <workItem from="1741187015954" duration="2987000" />
+      <workItem from="1742624572221" duration="13177000" />
+      <workItem from="1742643582535" duration="1535000" />
+      <workItem from="1742659475470" duration="2085000" />
+      <workItem from="1742662529854" duration="535000" />
+      <workItem from="1742707336957" duration="1270000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: Setup the first working version">
       <option name="closed" value="true" />
@@ -317,7 +428,39 @@
       <option name="project" value="LOCAL" />
       <updated>1739294315668</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="ci: Enable CI workflow">
+      <option name="closed" value="true" />
+      <created>1739295600308</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1739295600308</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test: Add unit tests&#10;&#10;Adds unit tests for `DuplicateFileDeleterFactory`&#10;and `ErrorHandler` classes">
+      <option name="closed" value="true" />
+      <created>1739732378562</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1739732378562</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test: Add unit test for directory traverser&#10;&#10;Adds unit tests for `Directory Traverser`">
+      <option name="closed" value="true" />
+      <created>1741194259563</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1741194259563</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test: Update unit test for directory traverser&#10;&#10;Updates unit tests for `Directory Traverser` to test related to flows where files and folders could not be accessed">
+      <option name="closed" value="true" />
+      <created>1742644435216</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742644435216</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,9 +535,30 @@
     <MESSAGE value="ci: Integrate Prettier, Husky, and lint-staged&#10;&#10;This commit integrates Prettier, Husky, and lint-staged into the&#10;project's CI/CD pipeline. Prettier will automatically format code,&#10;Husky will enable Git hooks to run checks before commits, and&#10;lint-staged will ensure that only staged files are checked. This&#10;improves code quality, consistency, and streamlines the development&#10;workflow." />
     <MESSAGE value="feat: Add interactive delete module&#10;&#10;Adds interactive delete module to allow user to&#10;delete interactively by selecting the files they deem as unwanted" />
     <MESSAGE value="fix: Prevent app crashing because of syntax error&#10;&#10;Prevents the app from crashing due to syntax error caused during conflict resolution." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Prevent app crashing because of syntax error&#10;&#10;Prevents the app from crashing due to syntax error caused during conflict resolution." />
+    <MESSAGE value="ci: Enable CI workflow" />
+    <MESSAGE value="test: Add unit tests&#10;&#10;Adds unit tests for `DuplicateFileDeleterFactory`&#10;and `ErrorHandler` classes" />
+    <MESSAGE value="test: Add unit test for directory traverser&#10;&#10;Adds unit tests for `Directory Traverser`" />
+    <MESSAGE value="test: Update unit test for directory traverser&#10;&#10;Updates unit tests for `Directory Traverser` to test related to flows where files and folders could not be accessed" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: Update unit test for directory traverser&#10;&#10;Updates unit tests for `Directory Traverser` to test related to flows where files and folders could not be accessed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/directory-traverser.test.ts</url>
+          <line>125</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <condition expression="directory.includes(&quot;Playlist&quot;)" language="TypeScript" />
+          <url>file://$PROJECT_DIR$/src/directory-traverser.ts</url>
+          <line>58</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

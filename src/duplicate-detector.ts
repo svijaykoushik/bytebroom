@@ -1,7 +1,7 @@
 // duplicate-detector.ts
-import {TaskQueueManager} from './worker-manager';
-import {ErrorHandler} from './error-handler';
-import {EventEmitter} from 'events';
+import { TaskQueueManager } from './worker-manager';
+import { ErrorHandler } from './error-handler';
+import { EventEmitter } from 'events';
 
 export class DuplicateDetector extends EventEmitter {
   constructor(private taskQueueManager: TaskQueueManager) {
