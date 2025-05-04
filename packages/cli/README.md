@@ -1,6 +1,6 @@
 # ByteBroom CLI 🧹
 
-[![Version](https://img.shields.io/npm/v/bytebroom)](https://www.npmjs.com/package/bytebroom) [![License](https://img.shields.io/badge/license-MIT-green)](../LICENSE) [![Downloads](https://img.shields.io/npm/dt/bytebroom)](https://www.npmjs.com/package/bytebroom)
+[![Version](https://img.shields.io/npm/v/@bytebroom/cli)](https://www.npmjs.com/package/@bytebroom/cli) [![License](https://img.shields.io/badge/license-MIT-green)](../LICENSE) [![Downloads](https://img.shields.io/npm/dt/@bytebroom/cli)](https://www.npmjs.com/package/@bytebroom/cli)
 
 The **ByteBroom Command-Line Interface (CLI)** provides a **fast**, **simple**, and **open-source** way to find and clean duplicate files directly from your terminal. It's designed to **easily** declutter your photos, documents, and downloads, making it perfect for **digital hoarders**, photographers, and anyone drowning in duplicate files! This interface leverages the core functionality of ByteBroom to offer a powerful duplicate file management solution.
 
@@ -8,10 +8,12 @@ The **ByteBroom Command-Line Interface (CLI)** provides a **fast**, **simple**, 
 
 ## ✨ **Key Features (CLI)**
 
-- **Lightning-Fast Scanning**: Quickly identify duplicates using file size, hash, and type comparisons initiated through simple commands.
-- **Effortless Cleanup**: Offers straightforward commands for one-click removal or interactive selection of duplicates for safe cleaning.
+- **Hash-Based Duplicate Detection**: Quickly identifies duplicate files using hash comparisons.
+- **Effortless Cleanup**: Allows users to manually select duplicates for removal, ensuring safety.
 - **Cross-Platform**: Works seamlessly on Windows, macOS, and Linux, providing a consistent command-line experience.
-- **Flexible Options**: Supports excluding specific file types and backing up duplicates before deletion for added safety.
+- **Basic File filtering**: Allows scanning only specific file types (e.g., jpg,png,txt).
+- **Basic File Type Exclusion**: Supports excluding certain file types from scans.
+- **Automatic Trash Management**: Deleted files are moved to the system trash instead of being permanently removed.
 
 ---
 
@@ -23,8 +25,8 @@ Ensure you have Node.js installed. You can install the ByteBroom CLI globally us
 
 ```bash
 # Install the ByteBroom CLI globally
-npm install -g bytebroom
-````
+npm install -g @bytebroom/cli
+```
 
 This command makes the `bytebroom` command available in your terminal.
 
@@ -34,21 +36,14 @@ Navigate to your terminal and use the `bytebroom` command followed by the path t
 
 ```bash
 # Scan a folder for duplicates (e.g., cluttered photo libraries)
-npx bytebroom /path/to/your/folder
+bytebroom /path/to/your/folder
 ```
 
 For a quicker scan focusing on larger files, use the `--fast` option:
 
 ```bash
 # Fast mode (quick scan for large files)
-npx bytebroom ~/Pictures --fast
-```
-
-To delete the identified duplicates (with confirmation prompts), use the `--clean` option:
-
-```bash
-# Delete duplicates (with confirmation prompts)
-npx bytebroom ~/Downloads --clean
+bytebroom ~/Pictures --fast
 ```
 
 ### **Advanced Options**
@@ -57,15 +52,21 @@ The ByteBroom CLI offers several options to customize your duplicate file manage
 
 ```bash
 # Exclude specific file types (e.g., RAW photos, logs)
-npx bytebroom /path/to/folder --exclude "*.CR2, *.log"
+bytebroom /path/to/folder --exclude "*.CR2, *.log"
 ```
-
-You can also create backups of the duplicates before deleting them using the `--backup` option:
 
 ```bash
-# Backup duplicates before deleting (safety first!)
-npx bytebroom /path/to/folder --clean --backup ~/backups
+# Filter results to specific file types (e.g., only images)
+bytebroom /path/to/folder --filter "jpg,png,txt"
 ```
+
+-----
+
+### 🔜 Upcoming Features
+- **Better Pagination Navigation** – Making it easier to browse through duplicates seamlessly.
+- **Caching Scan Results** – Avoid full rescans when canceling or modifying selections.
+- **Quick Scan Mode** – Detect duplicates based on filename similarity and file size.
+- **Automated Cleanup (--clean option)** – Enable bulk file removal with confirmation prompts for a smoother workflow.
 
 -----
 
