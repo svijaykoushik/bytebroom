@@ -5,6 +5,7 @@
         "name": "Vijaykoushik, S.",
         "email": "svijaykoushik@hotmail.com"
     },
+    "private": "false",
     "main": "dist/index.js",
     "license": "MIT",
     "repository": {

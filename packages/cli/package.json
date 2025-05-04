@@ -5,8 +5,9 @@
         "name": "Vijaykoushik, S.",
         "email": "svijaykoushik@hotmail.com"
     },
+    "private": "false",
     "license": "MIT",
-    "bin":{
+    "bin": {
         "bytebroom": "./bin/index.js"
     },
     "keywords": [
