@@ -1,8 +1,20 @@
 {
     "name": "@bytebroom/core",
-    "version": "1.0.0",
+    "version": "0.1.0",
+    "author": {
+        "name": "Vijaykoushik, S.",
+        "email": "svijaykoushik@hotmail.com"
+    },
     "main": "dist/index.js",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/svijaykoushik/bytebroom.git",
+        "directory": "packages/cli"
+    },
+    "bugs": {
+        "url": "https://github.com/svijaykoushik/bytebroom/issues"
+    },
     "scripts": {
         "build": "tsc",
         "dev": "cross-env NODE_ENV=development tsx src/index.ts",
