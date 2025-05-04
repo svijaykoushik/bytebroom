@@ -2,7 +2,8 @@
   "name": "bytebroom-project",
   "version": "0.0.0",
   "workspaces": [
-    "packages/*"
+    "packages/core",
+    "packages/cli"
   ],
   "engines": {
     "node": ">=20.12.0"
