@@ -32,22 +32,6 @@ jobs:
 
       - name: 🏗️ Build Project
         run: npm run build
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 20, 21 ]
-    steps:
-      - name: 🛎️ Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: ⚙️ Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: 📦 Install Dependencies
-        run: npm install
 
       - name: 🧪 Test Project
         run: npm test

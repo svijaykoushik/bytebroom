@@ -1,17 +1,10 @@
-import { TaskQueueManager, WorkerManager } from './worker-manager';
+
 import { ByteBroom } from './byte-broom';
-import { FileOperations } from './file-operations';
-import { ArgumentParser } from './argument-parser';
-import { ErrorHandler } from './error-handler';
 import * as os from 'os';
 import { existsSync, statSync } from 'fs';
-import { DuplicateFileDeleterFactory } from './duplicate-file-deleter-factory';
-import { DirectoryScanner } from './directory-scanner';
-import { DirectoryTraverser } from './directory-traverser';
-import { DuplicateFinder } from './duplicate-finder';
-import { DuplicateDetector } from './duplicate-detector';
-import { DuplicateRemover } from './duplicate-reomver';
 import { ProgressDisplay } from './progress-display';
+import { ArgumentParser } from './argument-parser';
+import { ErrorHandler, WorkerManager, TaskQueueManager, FileOperations, DuplicateFileDeleterFactory, DirectoryTraverser, DirectoryScanner, DuplicateDetector, DuplicateFinder, DuplicateRemover } from '@bytebroom/core';
 
 interface Options {
   knownSystemDirs: string[];

@@ -1,8 +1,6 @@
 import * as sinon from 'sinon';
 import { ByteBroom } from '../src/byte-broom';
-import { DirectoryScanner } from '../src/directory-scanner';
-import { DuplicateFinder } from '../src/duplicate-finder';
-import { DuplicateRemover } from '../src/duplicate-reomver';
+import { DirectoryScanner, DuplicateFinder, DuplicateRemover } from '@bytebroom/core';
 
 describe('ByteBroom', function() {
   let expect: Chai.ExpectStatic;

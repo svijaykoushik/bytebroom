@@ -1,0 +1,14 @@
+{
+    "name": "@bytebroom/core",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc",
+        "dev": "cross-env NODE_ENV=development tsx src/index.ts",
+        "test": "mocha -r tsx 'tests/**/*.test.ts'"
+    },
+    "dependencies": {
+        "trash": "^9.0.0"
+    }
+}
