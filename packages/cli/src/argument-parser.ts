@@ -21,12 +21,6 @@ export class ArgumentParser {
         },
       )
       .demandCommand(1)
-      .option('verbose', {
-        alias: 'v',
-        type: 'boolean',
-        default: false,
-        describe: 'Provide a verbose report',
-      })
       .option('filter', {
         alias: 'f',
         type: 'string',
@@ -57,7 +51,7 @@ export class ArgumentParser {
 
     return {
         directories: (args.directories as string[]).map((dir) => dir.trim()).filter((dir, i, dirs) => dirs.indexOf(dir) === i),
-      verbose: args.verbose,
+      verbose: false,
       filter: args.filter,
       exclude: args.exclude,
     };
