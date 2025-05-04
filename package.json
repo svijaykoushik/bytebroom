@@ -33,7 +33,7 @@
     "tsx": "^4.19.2",
     "typescript": "^5.5.3"
   },
-  "private": true,
+  "private": false,
   "lint-staged": {
     "**/*.{js,ts,json,css,md}": "prettier --write --ignore-unknown"
   }

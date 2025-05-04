@@ -5,10 +5,10 @@
         "name": "Vijaykoushik, S.",
         "email": "svijaykoushik@hotmail.com"
     },
-    "private": "false",
+    "private": false,
     "license": "MIT",
     "bin": {
-        "bytebroom": "./bin/index.js"
+        "bytebroom": "bin/index.js"
     },
     "keywords": [
         "duplicate finder",
@@ -37,5 +37,8 @@
         "@bytebroom/core": "*",
         "inquirer": "^12.3.2",
         "yargs": "^17.7.2"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
