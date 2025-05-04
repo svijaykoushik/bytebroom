@@ -2,6 +2,9 @@
     "name": "@bytebroom/cli",
     "version": "1.0.0",
     "license": "MIT",
+    "bin":{
+        "bytebroom": "./bin/index.js"
+    },
     "scripts": {
         "build": "tsc",
         "dev": "cross-env NODE_ENV=development tsx src/index.ts",
