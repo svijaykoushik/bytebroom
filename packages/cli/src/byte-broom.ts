@@ -1,7 +1,5 @@
 // byte-broom.ts
-import { DirectoryScanner } from './directory-scanner';
-import { DuplicateFinder } from './duplicate-finder';
-import { DuplicateRemover } from './duplicate-reomver';
+import { DirectoryScanner, DuplicateFinder, DuplicateRemover } from '@bytebroom/core';
 
 export class ByteBroom {
 
