@@ -1,6 +1,6 @@
 {
     "name": "@bytebroom/core",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "Vijaykoushik, S.",
         "email": "svijaykoushik@hotmail.com"
@@ -21,6 +21,9 @@
         "dev": "cross-env NODE_ENV=development tsx src/index.ts",
         "test": "mocha -r tsx 'tests/**/*.test.ts'"
     },
+    "files": [
+        "dist"
+    ],
     "dependencies": {
         "trash": "^9.0.0"
     },
