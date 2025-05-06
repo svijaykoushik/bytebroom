@@ -11,6 +11,7 @@
         "bytebroom": "bin/index.js"
     },
     "files": [
+        "bin",
         "dist"
     ],
     "keywords": [
@@ -37,9 +38,13 @@
     "devDependencies": {
         "@types/yargs": "^17.0.33"
     },
+    "engines": {
+      "node": ">=20.12.0"
+    },
     "dependencies": {
         "@bytebroom/core": "*",
         "inquirer": "^12.3.2",
+        "semver": "^7.7.1",
         "yargs": "^17.7.2"
     },
     "publishConfig": {
