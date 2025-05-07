@@ -1,0 +1,31 @@
+name: 🚢 Release Workflow
+
+on:
+  push:
+    tags:
+      - 'v*' # 🏷️ Trigger on new tags like v1.0.0
+
+permissions:
+  contents: write # 📝 Permission to write to the repository (needed for creating releases)
+
+jobs:
+  run-build:
+    name: Run Build before Release 🏗️
+    uses: ./.github/workflows/build.yml # 🔨 Ensure build passes before releasing
+    with:
+      node-version: '20' # ✨ Use Node.js 20 for the build
+
+  create-release:
+    name: Create GitHub Release 🚀
+    runs-on: ubuntu-22.04 # 🐧 Run on a recent Ubuntu version
+
+    steps:
+      - name: Create release from tag 🎉
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 🔑 Use GitHub token for authentication
+          tag: ${{ github.ref_name }} # 🔖 Get the pushed tag name
+        run: |
+          gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${tag#v}" \
+              --generate-notes # 📝 Create release notes automatically

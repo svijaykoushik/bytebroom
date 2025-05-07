@@ -1,36 +1,29 @@
-name: 🚀 Build
+name: ✨ Reusable Build Workflow ✨
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**/README*.md'
-  pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - '**/README*.md'
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: '20' # 🚀 Default Node.js version
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 20, 21 ]
-    steps:
-      - name: 🛎️ Checkout Repository
-        uses: actions/checkout@v4
+    runs-on: ubuntu-latest 🐧
 
-      - name: ⚙️ Setup Node.js
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ⚙️ Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ inputs.node-version }} # 🔧 Using specified Node.js version
 
-      - name: 📦 Install Dependencies
-        run: npm install
+      - name: 📦 Install dependencies
+        run: npm ci # 📦 Installing packages
 
-      - name: 🏗️ Build Project
+      - name: 🏗️ Run build
         run: npm run build
 
       - name: 🧪 Test Project
