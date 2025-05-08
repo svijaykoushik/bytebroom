@@ -1,8 +1,8 @@
 # ByteBroom CLI 🧹
 
-[![Version](https://img.shields.io/npm/v/@bytebroom/cli)](https://www.npmjs.com/package/@bytebroom/cli) [![License](https://img.shields.io/badge/license-MIT-green)](../LICENSE) [![Downloads](https://img.shields.io/npm/dt/@bytebroom/cli)](https://www.npmjs.com/package/@bytebroom/cli)
-
 The **ByteBroom Command-Line Interface (CLI)** provides a **fast**, **simple**, and **open-source** way to find and clean duplicate files directly from your terminal. It's designed to **easily** declutter your photos, documents, and downloads, making it perfect for **digital hoarders**, photographers, and anyone drowning in duplicate files! This interface leverages the core functionality of ByteBroom to offer a powerful duplicate file management solution.
+
+[![Version](https://img.shields.io/npm/v/@bytebroom/cli)](https://www.npmjs.com/package/@bytebroom/cli) [![License](https://img.shields.io/badge/license-MIT-green)](../LICENSE) [![Downloads](https://img.shields.io/npm/dt/@bytebroom/cli)](https://www.npmjs.com/package/@bytebroom/cli)
 
 ---
 
