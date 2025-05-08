@@ -1,6 +1,6 @@
 {
     "name": "@bytebroom/cli",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": {
         "name": "Vijaykoushik, S.",
         "email": "svijaykoushik@hotmail.com"
@@ -39,7 +39,7 @@
         "@types/yargs": "^17.0.33"
     },
     "engines": {
-      "node": ">=20.12.0"
+        "node": ">=20.12.0"
     },
     "dependencies": {
         "@bytebroom/core": "*",
